@@ -443,8 +443,6 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
-    discountedPrice: Schema.Attribute.BigInteger &
-      Schema.Attribute.DefaultTo<'0'>;
     imgUrl: Schema.Attribute.Text & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -452,6 +450,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     > &
       Schema.Attribute.Private;
+    oldPrice: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
     price: Schema.Attribute.BigInteger;
     publishedAt: Schema.Attribute.DateTime;
     remaining: Schema.Attribute.BigInteger;
