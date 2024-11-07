@@ -34,7 +34,7 @@
       "type": "boolean",
       "required": true
     },
-    "discountedPrice": {
+    "oldPrice": {
       "type": "biginteger",
       "default": "0"
     }
