@@ -44,6 +44,9 @@
     },
     "regularBottleRemaining": {
       "type": "biginteger"
+    },
+    "inventory": {
+      "type": "json"
     }
   }
 }
