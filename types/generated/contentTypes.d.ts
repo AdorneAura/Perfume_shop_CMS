@@ -447,6 +447,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
     imgUrl: Schema.Attribute.Text & Schema.Attribute.Required;
+    inventory: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -456,7 +457,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     oldPrice: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
     price: Schema.Attribute.BigInteger;
     publishedAt: Schema.Attribute.DateTime;
+    regularBottleRemaining: Schema.Attribute.BigInteger;
     remaining: Schema.Attribute.BigInteger;
+    smallBottleRemaining: Schema.Attribute.BigInteger &
+      Schema.Attribute.DefaultTo<'0'>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;

@@ -37,6 +37,16 @@
     "oldPrice": {
       "type": "biginteger",
       "default": "0"
+    },
+    "smallBottleRemaining": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "regularBottleRemaining": {
+      "type": "biginteger"
+    },
+    "inventory": {
+      "type": "json"
     }
   }
 }
