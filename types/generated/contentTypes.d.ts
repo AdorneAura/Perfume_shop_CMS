@@ -373,7 +373,7 @@ export interface ApiHomepageHomepage extends Struct.CollectionTypeSchema {
   collectionName: 'homepages';
   info: {
     description: '';
-    displayName: 'Homepage';
+    displayName: 'slider';
     pluralName: 'homepages';
     singularName: 'homepage';
   };
