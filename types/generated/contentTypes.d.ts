@@ -372,7 +372,8 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiHomepageHomepage extends Struct.CollectionTypeSchema {
   collectionName: 'homepages';
   info: {
-    displayName: 'Homepage';
+    description: '';
+    displayName: 'slider';
     pluralName: 'homepages';
     singularName: 'homepage';
   };
@@ -383,6 +384,10 @@ export interface ApiHomepageHomepage extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    display: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+    ImgUrl: Schema.Attribute.Text & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -390,7 +395,7 @@ export interface ApiHomepageHomepage extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    TitleImage: Schema.Attribute.Text & Schema.Attribute.Required;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
