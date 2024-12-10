@@ -47,6 +47,9 @@
     },
     "inventory": {
       "type": "json"
+    },
+    "category": {
+      "type": "string"
     }
   }
 }
